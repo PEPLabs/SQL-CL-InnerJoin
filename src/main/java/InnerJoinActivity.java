@@ -42,7 +42,7 @@ import java.util.Set;
  *
  * We can query these tables with an INNER JOIN ON the "class" column in each table:
  *      SELECT * FROM class
- *      INNER JOIN student ON class.class_title = students.class_title;
+ *      INNER JOIN student ON class.class_title = student.class_title;
  *
  *  The output of the join would create the following result set.
  *              class                                  student
