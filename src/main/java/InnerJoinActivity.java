@@ -89,6 +89,8 @@ public class InnerJoinActivity {
          *
          * Note: There should not be a wild card (*) in your statement. You will need to specify the column in your
          * statement by writing table.column, because the column names may be ambiguous between class and student.
+         *
+         * NOTE: Please write the SQL statement on a single line (do not use multi-line formatting).
          */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
