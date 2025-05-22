@@ -31,8 +31,8 @@ import java.util.Set;
  * Consider the following tables:
  *
  *              class                                  student
- * | id  |  teacher_name |class_title|    | id   |    student_name  |class_title|
- *  -------------------------------------------------------------------------------
+ * | id |  teacher_name |class_title|     | id |    student_name   |class_title|
+ * ----------------------------------     --------------------------------------
  * |1   |'Ms. Lovelace' |'Physics'  |     |1   |'John Stewart'     |'Writing'  |
  * |2   |'Ms. Lovelace' |'Math'     |     |2   |'Stephen Colbert'  |'Physics'  |
  * |3   |'Mr. McCarthy' |'Writing'  |     |3   |'Samantha Bee'     |'Math'     |
@@ -42,11 +42,11 @@ import java.util.Set;
  *
  * We can query these tables with an INNER JOIN ON the "class" column in each table:
  *      SELECT * FROM class
- *      INNER JOIN student ON class.class_title = students.class_title;
+ *      INNER JOIN student ON class.class_title = student.class_title;
  *
  *  The output of the join would create the following result set.
  *              class                                  student
- * | id     |  teacher_name |class_title  | id    |      student_name  |class_title|
+ *  | id    |  teacher_name |class_title  | id   |      student_name   |class_title|
  *  -------------------------------------------------------------------------------
  *  |1     |'Ms. Lovelace'   |'Physics'   |2     |'Stephen Colbert'    |'Physics' |
  *  |1     |'Ms. Lovelace'   |'Physics'   |5     |'Robert Riggle'      |'Physics' |
@@ -89,6 +89,9 @@ public class InnerJoinActivity {
          *
          * Note: There should not be a wild card (*) in your statement. You will need to specify the column in your
          * statement by writing table.column, because the column names may be ambiguous between class and student.
+         *
+         * NOTE: Please write the SQL statement on a single line (do not use multi-line formatting).
+         *
          */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
