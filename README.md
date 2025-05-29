@@ -77,8 +77,7 @@ are no students taking biology.)
 
 Problem 1: Write a query that will return the id and student_name of each of Ms. Lovelace's students. Notice that
 Ms. Lovelace teaches two classes, but which classes she teaches aren't known from the data in the student
-table. This means that you will need a way to combine the data from the two tables (inner join). You will
-need to simultaneously filter those results WHERE class.teacher_name = student.student_name to retrieve only her students from the resultset shown above.
+table. This means that you will need a way to combine the data from the two tables (inner join). You will need to filter those results WHERE class.teacher_name = 'Ms. Lovelace' to retrieve only her students from the resultset shown above.
 
 Note: There should not be a wild card (*) in your statement. You will need to specify the columns in your statement by writing columns in the format table.column (for instance, student.class_title), because the column names may be ambiguous between class and student.
 
